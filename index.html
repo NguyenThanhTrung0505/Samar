@@ -613,7 +613,7 @@
         <footer>
             <div class="container">
                 <div
-                    class="footer__top wow animate__ wow animate__animated animate__fadeInUp animated"
+                    class="footer__top wow animate__animated animate__fadeInUp"
                     data-wow-duration="2.5s"
                     data-wow-delay="0.2s"
                 >
@@ -636,7 +636,7 @@
                 </div>
                 <div class="footer__bottom">
                     <div
-                        class="contact wow animate__ wow animate__animated animate__fadeIn animate__delay-2s animated"
+                        class="contact wow animate__animated animate__fadeIn animate__delay-2s"
                         data-wow-duration="2s"
                     >
                         <a href="">
@@ -670,7 +670,7 @@
                         </ul>
                     </div>
                     <div
-                        class="links wow animate__ wow animate__animated animate__fadeIn animate__delay-2s animated"
+                        class="links wow animate__animated animate__fadeIn animate__delay-2s"
                         data-wow-duration="2s"
                     >
                         <h3>Our links</h3>
@@ -826,64 +826,19 @@
             new WOW().init();
         </script>
         <!-- Counterup -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
+            integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="./js/jquery.counterup.min.js"></script>
         <script>
-            // $(".counter").counterUp({
-            //     delay: 10,
-            //     time: 3000,
-            //     offset: 70,
-            //     beginAt: 100,
-            //     formatter: function (n) {
-            //         return n.replace(/,/g, ".");
-            //     },
-            // });
-            // $(document).ready(function () {
-            //     // 1. Kiểm tra xem có bắt đúng 4 thẻ số không? Hay bắt nhầm thẻ rỗng?
-            //     console.log(
-            //         "Số lượng thẻ counter tìm thấy:",
-            //         $(".counter").length,
-            //     );
-
-            //     // 2. In ra nội dung của từng thẻ xem có thẻ nào bị undefined hoặc rỗng không
-            //     $(".counter").each(function (index) {
-            //         console.log(
-            //             `Thẻ thứ ${index + 1} có nội dung là:`,
-            //             $(this).text(),
-            //         );
-            //     });
-
-            //     // Sau khi log thấy mọi thứ bình thường thì mới gọi thư viện
-            // try {
-            //     $(".counter").counterUp({
-            //         delay: 10,
-            //         time: 3000,
-            //     });
-            // } catch (error) {
-            //     console.log("Bắt được lỗi:", error);
-            // }
-            // });
-            $(".counter").each(function () {
-                const counter = $(this);
-
-                counter.waypoint(
-                    function () {
-                        if (!counter.hasClass("counted")) {
-                            counter.addClass("counted");
-
-                            counter.counterUp({
-                                delay: 10,
-                                time: 3000,
-                                formatter: function (n) {
-                                    return n.replace(/,/g, ".");
-                                },
-                            });
-                        }
-                    },
-                    {
-                        offset: "70%",
-                    },
-                );
+            $(document).ready(function () {
+                $(".counter").counterUp({
+                    delay: 10,
+                    time: 3000,
+                });
             });
         </script>
         <!-- Fancybox JS -->
